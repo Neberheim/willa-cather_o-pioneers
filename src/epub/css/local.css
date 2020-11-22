@@ -1,26 +1,20 @@
 @charset "utf-8";
 @namespace epub "http://www.idpf.org/2007/ops";
 
-[epub|type~="z3998:song"] p{
-	text-align: left;
-	text-indent: 0;
-}
-
-[epub|type~="z3998:song"] p > span{
-	display: block;
-	text-indent: -1em;
-	padding-left: 1em;
-}
-
-[epub|type~="z3998:song"] p > span + br{
-	display: none;
+first-word{
+	font-variant: small-caps;
 }
 
 /* All epigraphs */
 [epub|type~="epigraph"]{
-	font-style: italic;
+	font-style: normal;
 	hyphens: none;
 	-epub-hyphens: none;
+}
+
+[epub|type~="epigraph"] em,
+[epub|type~="epigraph"] i{
+	font-style: italic;
 }
 
 [epub|type~="epigraph"] cite{
@@ -28,6 +22,11 @@
 	font-style: normal;
 	font-variant: small-caps;
 }
+
+[epub|type~="epigraph"] cite i{
+	font-style: italic;
+}
+
 /* End all epigraphs */
 
 /* Full-page epigraphs */
@@ -57,8 +56,16 @@ section[epub|type~="epigraph"] > *{
 	section[epub|type~="epigraph"] > *{
 		margin: 0;
 	}
+
+	section[epub|type~="epigraph"] > * + *{
+		margin-top: 3em;
+	}
 }
 /* End full-page epigraphs */
+
+section[epub|type~="epigraph"] h2{
+	text-transform: uppercase;
+}
 
 /* All dedications */
 section[epub|type~="dedication"]{
@@ -89,21 +96,22 @@ section[epub|type~="dedication"] > *{
 	}
 
 	section[epub|type~="dedication"] > * + *{
-		margin-top: 3em;
+		margin-top: 1em;
 	}
 }
 /* End all dedications */
 
 section[epub|type~="dedication"] p{
 	font-variant: small-caps;
+	letter-spacing: 105%;
+	line-height: 2em;
 	text-align: center;
 	text-indent: 0;
+	text-transform: lowercase;
+
 }
 
-section[epub|type~="dedication"] p + p{
-	margin-top: 1em;
-}
+section[epub|type~="dedication"] name{
+	text-transform: uppercase;
 
-section[epub|type~="dedication"] i{
-	font-variant: normal;
 }
