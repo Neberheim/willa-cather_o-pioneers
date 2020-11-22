@@ -26,7 +26,6 @@ first-word{
 [epub|type~="epigraph"] cite i{
 	font-style: italic;
 }
-
 /* End all epigraphs */
 
 /* Full-page epigraphs */
@@ -108,10 +107,8 @@ section[epub|type~="dedication"] p{
 	text-align: center;
 	text-indent: 0;
 	text-transform: lowercase;
-
 }
 
 section[epub|type~="dedication"] name{
 	text-transform: uppercase;
-
 }
