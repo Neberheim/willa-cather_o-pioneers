@@ -5,6 +5,62 @@ first-word{
 	font-variant: small-caps;
 }
 
+/*Hymn, song, & verse*/
+p span.i1{
+	text-indent: -1em;
+	padding-left: 2em;
+}
+
+[epub|type~="z3998:hymn"],
+[epub|type~="z3998:song"] p{
+	text-align: center;
+	text-indent: 0;
+	font-size: 95%;
+}
+
+[epub|type~="z3998:verse"] p{
+	text-align: left;
+	text-indent: 0;
+	font-size: 95%;
+}
+
+[epub|type~="z3998:hymn"],
+[epub|type~="z3998:song"],
+[epub|type~="z3998:verse"] p > span{
+	display: block;
+	text-indent: -2em;
+	padding-left: 2em;
+}
+
+[epub|type~="z3998:hymn"],
+[epub|type~="z3998:song"],
+[epub|type~="z3998:verse"] p > span + br{
+	display: none;
+}
+
+[epub|type~="z3998:hymn"],
+[epub|type~="z3998:song"],
+[epub|type~="z3998:verse"] p + p{
+	margin-top: 1em;
+}
+/*End hymn, song, & verse*/
+
+/*Letter*/
+footer{
+	margin-top: 1em;
+	text-align: right;
+}
+
+[epub|type~="z3998:letter"] p{
+	text-indent: 0;
+	font-size: 95%;
+}
+
+[epub|type~="z3998:signature"]{
+	font-variant: small-caps;
+}
+/*End letter*/
+
 /* All epigraphs */
 [epub|type~="epigraph"]{
 	font-style: normal;
